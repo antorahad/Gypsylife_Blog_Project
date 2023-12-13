@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "category_name": "All"
+    },
+    {
+        "id": 2,
+        "category_name": "Trending"
+    },
+    {
+        "id": 3,
+        "category_name": "Culture"
+    },
+    {
+        "id": 4,
+        "category_name": "Travel"
+    },
+    {
+        "id": 5,
+        "category_name": "Nature"
+    },
+    {
+        "id": 6,
+        "category_name": "Food"
+    }
+]
