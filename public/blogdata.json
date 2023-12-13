@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "category_id": 3,
+        "category_name": "Culture",
+        "title": "Exploring Ancient Traditions",
+        "image": "https://example.com/images/exploring-ancient-traditions.jpg",
+        "date": "2023-10-15",
+        "author_image": "https://example.com/images/author1.jpg",
+        "author_name": "Emily Johnson",
+        "description": "Discover the rich tapestry of ancient cultural practices and traditions around the world."
+    },
+    {
+        "id": 2,
+        "category_id": 4,
+        "category_name": "Travel",
+        "title": "Hidden Gems in Europe",
+        "image": "https://example.com/images/hidden-gems-europe.jpg",
+        "date": "2023-09-28",
+        "author_image": "https://example.com/images/author2.jpg",
+        "author_name": "Daniel Smith",
+        "description": "Uncover the lesser-known but astonishing destinations in Europe that are worth visiting."
+    },
+    {
+        "id": 3,
+        "category_id": 5,
+        "category_name": "Nature",
+        "title": "The Magnificent Wilderness",
+        "image": "https://example.com/images/magnificent-wilderness.jpg",
+        "date": "2023-08-20",
+        "author_image": "https://example.com/images/author3.jpg",
+        "author_name": "Sophia Brown",
+        "description": "Immerse yourself in the breathtaking beauty of untouched natural landscapes."
+    },
+    {
+        "id": 4,
+        "category_id": 6,
+        "category_name": "Food",
+        "title": "Culinary Delights from Around the World",
+        "image": "https://example.com/images/culinary-delights.jpg",
+        "date": "2023-07-12",
+        "author_image": "https://example.com/images/author4.jpg",
+        "author_name": "Michael Wilson",
+        "description": "Indulge in a gastronomic journey through diverse cuisines and flavors worldwide."
+    },
+    {
+        "id": 5,
+        "category_id": 2,
+        "category_name": "Trending",
+        "title": "Current Trends in Technology",
+        "image": "https://example.com/images/current-tech-trends.jpg",
+        "date": "2023-06-25",
+        "author_image": "https://example.com/images/author5.jpg",
+        "author_name": "Olivia Garcia",
+        "description": "Stay updated on the latest technological advancements shaping the future."
+    },
+    {
+        "id": 6,
+        "category_id": 4,
+        "category_name": "Travel",
+        "title": "Adventure Travel Destinations",
+        "image": "https://example.com/images/adventure-travel-destinations.jpg",
+        "date": "2023-05-18",
+        "author_image": "https://example.com/images/author6.jpg",
+        "author_name": "David Lee",
+        "description": "Embark on thrilling journeys to adrenaline-pumping adventure destinations."
+    },
+    {
+        "id": 7,
+        "category_id": 3,
+        "category_name": "Culture",
+        "title": "Cultural Festivals Celebrating Diversity",
+        "image": "https://example.com/images/cultural-festivals.jpg",
+        "date": "2023-04-07",
+        "author_image": "https://example.com/images/author7.jpg",
+        "author_name": "Emma Wilson",
+        "description": "Experience the vibrancy and traditions of various cultural festivals worldwide."
+    },
+    {
+        "id": 8,
+        "category_id": 5,
+        "category_name": "Nature",
+        "title": "Ecological Wonders",
+        "image": "https://example.com/images/ecological-wonders.jpg",
+        "date": "2023-03-14",
+        "author_image": "https://example.com/images/author8.jpg",
+        "author_name": "William Adams",
+        "description": "Explore the marvels of nature and the importance of preserving our ecosystems."
+    },
+    {
+        "id": 9,
+        "category_id": 6,
+        "category_name": "Food",
+        "title": "Mouthwatering Street Food",
+        "image": "https://example.com/images/street-food.jpg",
+        "date": "2023-02-05",
+        "author_image": "https://example.com/images/author9.jpg",
+        "author_name": "Sophie Miller",
+        "description": "Delve into the flavors of delectable street food from diverse cultures."
+    },
+    {
+        "id": 10,
+        "category_id": 2,
+        "category_name": "Trending",
+        "title": "Innovations in Artificial Intelligence",
+        "image": "https://example.com/images/ai-innovations.jpg",
+        "date": "2023-01-19",
+        "author_image": "https://example.com/images/author10.jpg",
+        "author_name": "Lucas Carter",
+        "description": "Discover the groundbreaking developments and applications in AI technology."
+    },
+    {
+        "id": 11,
+        "category_id": 3,
+        "category_name": "Culture",
+        "title": "Timeless Traditions: A Glimpse into History",
+        "image": "https://example.com/images/timeless-traditions.jpg",
+        "date": "2023-12-05",
+        "author_image": "https://example.com/images/author11.jpg",
+        "author_name": "Liam Robinson",
+        "description": "Journey through history by exploring cultural traditions passed down through generations."
+    },
+    {
+        "id": 12,
+        "category_id": 4,
+        "category_name": "Travel",
+        "title": "Island Paradise Getaways",
+        "image": "https://example.com/images/island-paradise.jpg",
+        "date": "2023-11-22",
+        "author_image": "https://example.com/images/author12.jpg",
+        "author_name": "Ava Green",
+        "description": "Escape to serene island destinations offering tranquility and breathtaking landscapes."
+    },
+    {
+        "id": 13,
+        "category_id": 5,
+        "category_name": "Nature",
+        "title": "The Enchanting Beauty of Rainforests",
+        "image": "https://example.com/images/enchanting-rainforests.jpg",
+        "date": "2023-10-10",
+        "author_image": "https://example.com/images/author13.jpg",
+        "author_name": "Noah Harris",
+        "description": "Dive into the lush greenery and diverse wildlife of enchanting rainforest ecosystems."
+    },
+    {
+        "id": 14,
+        "category_id": 6,
+        "category_name": "Food",
+        "title": "Gourmet Delights: Fusion Cuisine",
+        "image": "https://example.com/images/fusion-cuisine.jpg",
+        "date": "2023-09-03",
+        "author_image": "https://example.com/images/author14.jpg",
+        "author_name": "Ella Ward",
+        "description": "Savor the innovative blend of flavors in fusion cuisine from around the globe."
+    },
+    {
+        "id": 15,
+        "category_id": 2,
+        "category_name": "Trending",
+        "title": "Blockchain Revolution: Transforming Industries",
+        "image": "https://example.com/images/blockchain-revolution.jpg",
+        "date": "2023-08-18",
+        "author_image": "https://example.com/images/author15.jpg",
+        "author_name": "Logan King",
+        "description": "Explore the potential of blockchain technology in reshaping various sectors."
+    }
+]

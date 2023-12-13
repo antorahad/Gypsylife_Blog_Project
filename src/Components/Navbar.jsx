@@ -17,13 +17,8 @@ const Navbar = () => {
         };
     }, []);
 
-    const navbarStyle = {
-        backgroundColor: scrolled ? 'white' : 'transparent',
-        transition: 'background-color 0.3s ease-in-out',
-    };
-
     return (
-        <header className="w-full fixed px-5" style={navbarStyle}>
+        <header className={scrolled ? "w-full fixed px-5 bg-white shadow-sm" : "w-full fixed px-5 bg-transparent"}>
             <div className="container mx-auto py-3">
                 <nav className="navbar">
                     <div className="navbar-start">
