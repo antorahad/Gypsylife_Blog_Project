@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [categories, setCategories] = useState([]);
@@ -7,7 +8,7 @@ const Blogs = () => {
 
   useEffect(() => {
     // Fetch the JSON data
-    fetch('./blogdata.json') // Replace with your JSON URL
+    fetch('/blogdata.json') // Replace with your JSON URL
       .then(response => response.json())
       .then(data => {
         // Extract unique category names
@@ -61,6 +62,9 @@ const Blogs = () => {
                   <h4 className="text-2xl line-clamp-2 font-medium">{blog.title}</h4>
                   <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
                   <p className="text-base font-normal line-clamp-3">{blog.description}</p>
+                  <Link to={`/blog/${blog.id}`}>
+                    <p className="text-red-500">Read More</p>
+                  </Link>
                 </div>
                 {/* Render other blog details */}
               </div>
