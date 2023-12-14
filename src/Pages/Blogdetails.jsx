@@ -20,26 +20,39 @@ const Blogdetails = () => {
     return (
         <div className="min-h-screen flex items-center justify-center px-5">
             <div className="container mx-auto py-20">
-                <h1>{title}</h1>
-                <span>{category_name}</span>
-                <p>{author_name}</p>
-                <img src={author_image} alt={author_name} /> {/* Render author image */}
-                <p>{publish_date}</p>
-                <p>{description}</p>
+                <div className="space-y-6">
+                    <Link to={'/'} className="text-red-500">
+                        Home
+                    </Link>
+                    <h1 className="text-4xl font-semibold">{title}</h1>
+                    <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{category_name}</span>
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                            <div className="avatar">
+                                <div className="w-8 rounded-full">
+                                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                </div>
+                            </div>
+                            <p>{author_name}</p>
+                        </div>
+                        <p>Published Date: {publish_date}</p>
+                    </div>
+                    <p className="text-justify">{description}</p>
+                </div>
                 <div className="mt-10">
                     <h2 className="text-4xl font-semibold mb-5">Related Blogs</h2>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                         {
                             relatedBlogs.map(blog => (
                                 <div key={blog.id} className="card bg-slate-50 shadow-sm rounded-md p-2 w-full">
                                     <img src={blog.image} alt={blog.title} className="w-full h-40 object-cover mb-4" />
                                     <div className="card-body space-y-4">
-                                    <h3 className="text-2xl line-clamp-2 font-medium">{blog.title}</h3>
-                                    <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
-                                    <p className="text-base font-normal line-clamp-3">{blog.description}</p>
-                                    <Link to={`/blog/${blog.id}`}>
-                                        <p className="text-red-500">Read More</p>
-                                    </Link>
+                                        <h3 className="text-2xl line-clamp-2 font-medium">{blog.title}</h3>
+                                        <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
+                                        <p className="text-base font-normal line-clamp-3">{blog.description}</p>
+                                        <Link to={`/blog/${blog.id}`}>
+                                            <p className="text-red-500">Read More</p>
+                                        </Link>
                                     </div>
                                 </div>
                             ))
