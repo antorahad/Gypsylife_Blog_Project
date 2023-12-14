@@ -1,49 +1,56 @@
 import { useEffect, useState } from "react";
 
 const Blogs = () => {
-    const [categoryButtons, setCategoryButtons] = useState([]);
-    const [activeCategory, setActiveCategory] = useState(''); // State to track active category
+  const [categories, setCategories] = useState([]);
+  const [blogData, setBlogData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-    useEffect(() => {
-        // Fetching the categories data from the correct path
-        fetch('/categories.json') // Adjust the path if needed based on your project setup
-            .then(res => res.json())
-            .then(data => {
-                setCategoryButtons(data);
-                // Set the first category as active by default
-                if (data.length > 0) {
-                    setActiveCategory(data[0].id);
-                }
-            })
-            .catch(error => console.error("Error fetching data:", error)); // Add error handling if required
-    }, []);
+  useEffect(() => {
+    // Fetch the JSON data
+    fetch('./blogdata.json') // Replace with your JSON URL
+      .then(response => response.json())
+      .then(data => {
+        // Extract unique category names
+        const uniqueCategories = [...new Set(data.map(item => item.category_name))];
+        setCategories(uniqueCategories);
+        setBlogData(data); // Set all blog data initially
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
 
-    const handleCategoryClick = (id) => {
-        // Set the active category when a button is clicked
-        setActiveCategory(id);
-        // Handle click or any action for category buttons
-        // You can add functionality here if you want to handle category clicks
-    };
+  const handleCategoryClick = category => {
+    setSelectedCategory(category);
+  };
 
-    return (
-        <div className="px-5">
-            <div className="container mx-auto py-40">
-                <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-5">
-                    {
-                        categoryButtons.map(categoryButton => (
-                            <button
-                                className={activeCategory === categoryButton.id ? 'btn bg-red-500 hover:bg-red-500 focus:bg-red-500 py-3 px-5 border-none outline-none text-white' : 'btn bg-slate-100 hover:bg-slate-100 focus:bg-slate-100 text-slate-950 py-3 px-5 border-none outline-none'}
-                                onClick={() => handleCategoryClick(categoryButton.id)}
-                                key={categoryButton.id}
-                            >
-                                {categoryButton.category_name}
-                            </button>
-                        ))
-                    }
-                </div>
-            </div>
-        </div>
-    );
+  const filteredBlogData = selectedCategory
+    ? blogData.filter(item => item.category_name === selectedCategory)
+    : blogData;
+
+  const displayData = filteredBlogData.length > 0 ? filteredBlogData : blogData;
+
+  return (
+    <div>
+      <div className="tab-buttons">
+        <button className="btn" key="All" onClick={() => handleCategoryClick('')}>All</button>
+        {categories.map((category, index) => (
+          <button className="btn" key={index} onClick={() => handleCategoryClick(category)}>
+            {category}
+          </button>
+        ))}
+      </div>
+      <h3>Selected Category: {selectedCategory || 'All'}</h3>
+      <div className="blog-posts">
+        {displayData.map(blog => (
+          <div key={blog.id} className="blog-post">
+            <h4>{blog.title}</h4>
+            <p>Category: {blog.category_name}</p>
+            {/* Render other blog details */}
+          </div>
+        ))}
+        {displayData.length === 0 && <p>No data available</p>}
+      </div>
+    </div>
+  );
 };
 
 export default Blogs;
