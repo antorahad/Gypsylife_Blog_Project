@@ -18,7 +18,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={scrolled ? "w-full fixed px-5 bg-white shadow-sm" : "w-full fixed px-5 bg-transparent"}>
+        <header className={scrolled ? "w-full fixed px-5 bg-white shadow-sm z-20" : "w-full fixed px-5 bg-transparent z-20"}>
             <div className="container mx-auto py-3">
                 <nav className="navbar">
                     <div className="navbar-start">

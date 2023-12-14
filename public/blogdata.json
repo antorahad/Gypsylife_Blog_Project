@@ -1,92 +1,222 @@
 [
-    {
-      "id": 1,
-      "category_id": 1,
-      "category_name": "Technology",
-      "title": "The Future of AI: Trends and Predictions",
-      "image": "https://example.com/image1.jpg",
-      "author_name": "John Doe",
-      "author_image": "https://example.com/authors/john_doe.jpg"
-    },
-    {
-      "id": 2,
-      "category_id": 2,
-      "category_name": "Travel",
-      "title": "Exploring the Hidden Gems of Southeast Asia",
-      "image": "https://example.com/image2.jpg",
-      "author_name": "Jane Smith",
-      "author_image": "https://example.com/authors/jane_smith.jpg"
-    },
-    {
-      "id": 3,
-      "category_id": 1,
-      "category_name": "Technology",
-      "title": "The Impact of Blockchain on Industries",
-      "image": "https://example.com/image3.jpg",
-      "author_name": "Alex Johnson",
-      "author_image": "https://example.com/authors/alex_johnson.jpg"
-    },
-    {
-      "id": 4,
-      "category_id": 3,
-      "category_name": "Health",
-      "title": "Mindfulness Meditation: Benefits and Practices",
-      "image": "https://example.com/image4.jpg",
-      "author_name": "Emily Brown",
-      "author_image": "https://example.com/authors/emily_brown.jpg"
-    },
-    {
-      "id": 5,
-      "category_id": 4,
-      "category_name": "Science",
-      "title": "The Mysteries of the Universe: Exploring Dark Matter",
-      "image": "https://example.com/image5.jpg",
-      "author_name": "David Clark",
-      "author_image": "https://example.com/authors/david_clark.jpg"
-    },
-    {
-      "id": 6,
-      "category_id": 2,
-      "category_name": "Travel",
-      "title": "A Guide to Solo Backpacking in Europe",
-      "image": "https://example.com/image6.jpg",
-      "author_name": "Sophie Adams",
-      "author_image": "https://example.com/authors/sophie_adams.jpg"
-    },
-    {
-      "id": 7,
-      "category_id": 5,
-      "category_name": "Lifestyle",
-      "title": "Healthy Eating Habits for a Balanced Life",
-      "image": "https://example.com/image7.jpg",
-      "author_name": "Michael Wilson",
-      "author_image": "https://example.com/authors/michael_wilson.jpg"
-    },
-    {
-      "id": 8,
-      "category_id": 1,
-      "category_name": "Technology",
-      "title": "5G Technology: Revolutionizing Connectivity",
-      "image": "https://example.com/image8.jpg",
-      "author_name": "Sophia Lee",
-      "author_image": "https://example.com/authors/sophia_lee.jpg"
-    },
-    {
-      "id": 9,
-      "category_id": 3,
-      "category_name": "Health",
-      "title": "Importance of Sleep for Mental Health",
-      "image": "https://example.com/image9.jpg",
-      "author_name": "Daniel White",
-      "author_image": "https://example.com/authors/daniel_white.jpg"
-    },
-    {
-      "id": 10,
-      "category_id": 4,
-      "category_name": "Science",
-      "title": "The Evolution of Artificial Intelligence",
-      "image": "https://example.com/image10.jpg",
-      "author_name": "Olivia Taylor",
-      "author_image": "https://example.com/authors/olivia_taylor.jpg"
-    }
-  ]  
+  {
+    "id": 1,
+    "category_id": 1,
+    "category_name": "Trending",
+    "title": "The Rise of Remote Work: Changing the Landscape of Employment",
+    "image": "https://example.com/image1.jpg",
+    "author_name": "John Doe",
+    "author_image": "https://example.com/authors/johndoe.jpg",
+    "publish_date": "2023-01-15",
+    "description": "The shift towards remote work has revolutionized the modern workforce, altering traditional office dynamics and redefining productivity norms. With technological advancements and changing attitudes, remote work has become a viable option for many industries. This blog explores the advantages and challenges of remote work, its impact on work-life balance, and the evolving corporate culture. As companies adapt to this trend, it's essential to examine the long-term effects and potential benefits for both employers and employees."
+  },
+  {
+    "id": 2,
+    "category_id": 2,
+    "category_name": "Culture",
+    "title": "Cultural Celebrations Around the World: A Kaleidoscope of Traditions",
+    "image": "https://example.com/image2.jpg",
+    "author_name": "Emily Smith",
+    "author_image": "https://example.com/authors/emilysmith.jpg",
+    "publish_date": "2023-02-28",
+    "description": "Diverse cultures worldwide exhibit a rich tapestry of customs and celebrations, each reflecting unique heritage and values. This blog delves into a myriad of cultural festivities, from religious ceremonies to regional festivals, highlighting their significance and the underlying stories they convey. By exploring these vibrant traditions, we gain a deeper understanding of different societies, fostering appreciation and respect for cultural diversity."
+  },
+  {
+    "id": 3,
+    "category_id": 3,
+    "category_name": "Travel",
+    "title": "Exploring Hidden Gems: Off-the-Beaten-Path Destinations",
+    "image": "https://example.com/image3.jpg",
+    "author_name": "Sophia Johnson",
+    "author_image": "https://example.com/authors/sophiajohnson.jpg",
+    "publish_date": "2023-04-10",
+    "description": "Venturing beyond tourist hotspots unveils a treasure trove of lesser-known destinations brimming with beauty and authenticity. This blog uncovers hidden gems off the beaten path, from secluded beaches to quaint villages and untouched landscapes. Embark on a journey to discover these hidden paradises, embracing the serenity and unique experiences they offer, away from bustling crowds and mainstream attractions."
+  },
+  {
+    "id": 4,
+    "category_id": 4,
+    "category_name": "Nature",
+    "title": "Preserving Biodiversity: Our Responsibility to Earth's Ecosystems",
+    "image": "https://example.com/image4.jpg",
+    "author_name": "Michael Brown",
+    "author_image": "https://example.com/authors/michaelbrown.jpg",
+    "publish_date": "2023-05-22",
+    "description": "The Earth's biodiversity faces unprecedented threats, endangering countless species and disrupting fragile ecosystems. This blog sheds light on the importance of preserving biodiversity, discussing conservation efforts, sustainable practices, and the profound impact of human activities on wildlife and nature. Understanding our role in safeguarding Earth's ecosystems is crucial to ensuring a harmonious coexistence between humanity and the natural world."
+  },
+  {
+    "id": 5,
+    "category_id": 5,
+    "category_name": "Food",
+    "title": "Culinary Journeys: Exploring Global Flavors and Gastronomy",
+    "image": "https://example.com/image5.jpg",
+    "author_name": "Olivia Martinez",
+    "author_image": "https://example.com/authors/oliviamartinez.jpg",
+    "publish_date": "2023-07-18",
+    "description": "Food transcends borders, offering a tantalizing array of flavors and culinary experiences worldwide. This blog invites you on a gastronomic adventure, showcasing diverse cuisines, traditional recipes, and the cultural significance of food in various societies. From street food delights to haute cuisine, immerse yourself in the rich tapestry of global flavors and discover the stories behind each dish."
+  },
+  {
+    "id": 6,
+    "category_id": 1,
+    "category_name": "Trending",
+    "title": "The Evolution of Artificial Intelligence in Modern Technology",
+    "image": "https://example.com/image6.jpg",
+    "author_name": "David Wilson",
+    "author_image": "https://example.com/authors/davidwilson.jpg",
+    "publish_date": "2023-09-05",
+    "description": "Artificial Intelligence (AI) continues to revolutionize various industries, reshaping how we interact with technology. This blog explores the evolution of AI, its applications across sectors such as healthcare, finance, and entertainment, and the ethical considerations surrounding its advancement. As AI becomes increasingly integrated into our daily lives, understanding its capabilities and limitations is imperative for harnessing its potential responsibly."
+  },
+  {
+    "id": 7,
+    "category_id": 2,
+    "category_name": "Culture",
+    "title": "Folklore and Legends: Tales Passed Down Through Generations",
+    "image": "https://example.com/image7.jpg",
+    "author_name": "Liam Johnson",
+    "author_image": "https://example.com/authors/liamjohnson.jpg",
+    "publish_date": "2023-10-30",
+    "description": "Folklore and legends form an integral part of cultural heritage, encapsulating the beliefs, values, and imagination of societies across time. This blog delves into captivating tales from different cultures, exploring the symbolism, morals, and enduring legacy of these stories. Dive into the enchanting realm of folklore, where myths and legends continue to resonate and shape cultural identities worldwide."
+  },
+  {
+    "id": 8,
+    "category_id": 3,
+    "category_name": "Travel",
+    "title": "Sustainable Travel Practices: Nurturing the Planet While Exploring It",
+    "image": "https://example.com/image8.jpg",
+    "author_name": "Ella Davis",
+    "author_image": "https://example.com/authors/elladavis.jpg",
+    "publish_date": "2023-12-15",
+    "description": "Travel presents an opportunity to appreciate the world's beauty while also preserving it for future generations. This blog emphasizes the importance of sustainable travel practices, advocating for eco-friendly tourism, responsible cultural immersion, and minimizing environmental impact. By adopting sustainable approaches, travelers can contribute positively to local communities and ecosystems, fostering a harmonious relationship between tourism and nature."
+  },
+  {
+    "id": 9,
+    "category_id": 4,
+    "category_name": "Nature",
+    "title": "Marvels of Marine Life: Exploring Underwater Wonders",
+    "image": "https://example.com/image9.jpg",
+    "author_name": "Sophie Brown",
+    "author_image": "https://example.com/authors/sophiebrown.jpg",
+    "publish_date": "2024-02-20",
+    "description": "Beneath the ocean's surface lies a breathtaking realm teeming with diverse marine life and mesmerizing ecosystems. This blog takes you on a journey to explore the wonders of the underwater world, from vibrant coral reefs to majestic marine creatures. Discover the importance of marine conservation and the awe-inspiring beauty found in the depths of our oceans, urging us to protect and preserve these precious underwater habitats."
+  },
+  {
+    "id": 10,
+    "category_id": 5,
+    "category_name": "Food",
+    "title": "Farm-to-Table Movement: Embracing Fresh and Sustainable Cuisine",
+    "image": "https://example.com/image10.jpg",
+    "author_name": "Daniel Miller",
+    "author_image": "https://example.com/authors/danielmiller.jpg",
+    "publish_date": "2024-04-12",
+    "description": "The farm-to-table movement champions locally sourced, fresh ingredients, promoting sustainable agriculture and a deeper connection to the food we consume. This blog delves into the significance of farm-to-table dining, exploring its benefits for both consumers and the environment. By supporting local farmers and prioritizing seasonal produce, individuals contribute to a healthier food system while savoring the flavors of responsibly sourced cuisine."
+  },
+  {
+    "id": 11,
+    "category_id": 1,
+    "category_name": "Trending",
+    "title": "Metaverse: Redefining Digital Interaction and Entertainment",
+    "image": "https://example.com/image11.jpg",
+    "author_name": "Sophie Clark",
+    "author_image": "https://example.com/authors/sophieclark.jpg",
+    "publish_date": "2024-06-30",
+    "description": "The concept of the metaverse has gained traction, promising a virtual realm where individuals can engage, create, and socialize in unprecedented ways. This blog explores the potential of the metaverse, its implications across gaming, entertainment, education, and business, and the evolving landscape of digital interaction. As technology advances, the metaverse presents intriguing opportunities and challenges, reshaping our online experiences."
+  },
+  {
+    "id": 12,
+    "category_id": 2,
+    "category_name": "Culture",
+    "title": "Artisan Crafts and Heritage: Honoring Traditional Artistry",
+    "image": "https://example.com/image12.jpg",
+    "author_name": "David Thompson",
+    "author_image": "https://example.com/authors/davidthompson.jpg",
+    "publish_date": "2024-08-15",
+    "description": "Artisan crafts embody centuries-old techniques passed down through generations, preserving cultural heritage and artistic excellence. This blog celebrates the craftsmanship behind artisanal goods, from handwoven textiles to intricate pottery, showcasing the stories and skills embedded in each creation. By supporting artisans and embracing their traditions, we uphold cultural legacies and cherish the authenticity of handmade craftsmanship."
+  },
+  {
+    "id": 13,
+    "category_id": 3,
+    "category_name": "Travel",
+    "title": "Eco-Tourism: Exploring Pristine Wilderness and Conservation Sanctuaries",
+    "image": "https://example.com/image13.jpg",
+    "author_name": "Emma Roberts",
+    "author_image": "https://example.com/authors/emmaroberts.jpg",
+    "publish_date": "2024-10-20",
+    "description": "Eco-tourism promotes responsible travel to environmentally sensitive areas, fostering conservation and community engagement. This blog highlights eco-friendly travel destinations, from lush rainforests to wildlife reserves, emphasizing the importance of sustainable tourism practices. By immersing in nature while preserving its integrity, eco-tourists contribute to the protection of fragile ecosystems and the well-being of local communities."
+  },
+  {
+    "id": 14,
+    "category_id": 4,
+    "category_name": "Nature",
+    "title": "The Healing Power of Forest Bathing: Reconnecting with Nature's Tranquility",
+    "image": "https://example.com/image14.jpg",
+    "author_name": "Isabella Wilson",
+    "author_image": "https://example.com/authors/isabellawilson.jpg",
+    "publish_date": "2025-01-05",
+    "description": "Forest bathing, or 'shinrin-yoku,' offers a therapeutic escape into the tranquility of forests, promoting well-being and stress relief. This blog explores the restorative benefits of immersing oneself in nature, highlighting the science behind forest bathing and its positive impact on mental and physical health. Amidst the lush greenery, individuals can rejuvenate their senses and forge a deeper connection with the natural world."
+  },
+  {
+    "id": 15,
+    "category_id": 5,
+    "category_name": "Food",
+    "title": "Plant-Based Culinary Revolution: Embracing a Vegan Gastronomic Journey",
+    "image": "https://example.com/image15.jpg",
+    "author_name": "Liam Davis",
+    "author_image": "https://example.com/authors/liamdavis.jpg",
+    "publish_date": "2025-03-22",
+    "description": "The rise of plant-based cuisine has sparked a culinary revolution, offering innovative and delectable vegan alternatives. This blog celebrates the diversity of plant-based dishes, from hearty vegan comfort foods to inventive plant-powered creations, exploring their nutritional value and impact on sustainability. As more individuals embrace a plant-based lifestyle, the culinary world continues to evolve, catering to varied tastes while promoting ethical dining choices."
+  },
+  {
+    "id": 16,
+    "category_id": 1,
+    "category_name": "Trending",
+    "title": "NFTs: Revolutionizing Digital Ownership and Creativity",
+    "image": "https://example.com/image16.jpg",
+    "author_name": "Aiden Carter",
+    "author_image": "https://example.com/authors/aidencarter.jpg",
+    "publish_date": "2025-05-10",
+    "description": "Non-Fungible Tokens (NFTs) have emerged as a transformative force in the digital realm, enabling unique ownership and authentication of digital assets. This blog explores the NFT craze, its impact on art, entertainment, and collectibles, and the implications for creators and consumers alike. As the NFT market continues to evolve, it reshapes how we perceive and value digital content and ownership."
+  },
+  {
+    "id": 17,
+    "category_id": 2,
+    "category_name": "Culture",
+    "title": "Cultural Fusion: The Blending of Traditions in Modern Society",
+    "image": "https://example.com/image17.jpg",
+    "author_name": "Mia Johnson",
+    "author_image": "https://example.com/authors/miajohnson.jpg",
+    "publish_date": "2025-07-28",
+    "description": "In an interconnected world, cultural fusion has become prevalent, resulting in the amalgamation of diverse traditions and practices. This blog examines the phenomenon of cultural fusion, exploring how globalization and multiculturalism shape contemporary society. By embracing cultural diversity and hybrid identities, individuals celebrate a fusion of traditions, fostering inclusivity and evolving cultural landscapes."
+  },
+  {
+    "id": 18,
+    "category_id": 3,
+    "category_name": "Travel",
+    "title": "Digital Nomad Lifestyle: Embracing Work and Travel Freedom",
+    "image": "https://example.com/image18.jpg",
+    "author_name": "Noah Adams",
+    "author_image": "https://example.com/authors/noahadams.jpg",
+    "publish_date": "2025-09-15",
+    "description": "The rise of digital nomadism has empowered individuals to work remotely while exploring diverse destinations worldwide. This blog delves into the digital nomad lifestyle, discussing its benefits, challenges, and the evolving landscape of remote work. From co-working spaces in exotic locales to embracing a location-independent career, digital nomads redefine the traditional notions of work and travel."
+  },
+  {
+    "id": 19,
+    "category_id": 4,
+    "category_name": "Nature",
+    "title": "Rewilding: Restoring Ecosystems for Wildlife Conservation",
+    "image": "https://example.com/image19.jpg",
+    "author_name": "Ethan Garcia",
+    "author_image": "https://example.com/authors/ethangarcia.jpg",
+    "publish_date": "2025-11-20",
+    "description": "Rewilding initiatives aim to restore natural habitats and reintroduce species to bolster biodiversity and ecological balance. This blog explores the concept of rewilding, showcasing successful conservation projects and their positive impact on ecosystems. By allowing nature to thrive and reclaim its space, rewilding offers hope for endangered species and revitalizes landscapes for future generations."
+  },
+  {
+    "id": 20,
+    "category_id": 5,
+    "category_name": "Food",
+    "title": "Art of Fermentation: Exploring the World of Cultured Foods",
+    "image": "https://example.com/image20.jpg",
+    "author_name": "Ava Wilson",
+    "author_image": "https://example.com/authors/avawilson.jpg",
+    "publish_date": "2026-01-12",
+    "description": "Fermentation is an age-old culinary technique that enhances flavors and preserves foods, giving rise to a myriad of delicious cultured dishes. This blog celebrates the art of fermentation, from kimchi and kombucha to artisanal cheeses and sourdough bread. Delve into the world of probiotic-rich, tangy flavors and discover the science and traditions behind these beloved fermented foods."
+  }
+]
