@@ -10,7 +10,7 @@ const Blogdetails = () => {
         return <div>Loading...</div>; // Handle case when detail is not found
     }
 
-    const { title, category_id, category_name, author_name, author_image, publish_date, description } = detail;
+    const { image, title, category_id, category_name, author_name, author_image, publish_date, description } = detail;
 
     // Filter other blog posts with the same category_name and category_id
     const relatedBlogs = details.filter(blog =>
@@ -24,6 +24,7 @@ const Blogdetails = () => {
                     <Link to={'/'} className="text-red-500">
                         Home
                     </Link>
+                    <img src={image} className="w-full" />
                     <h1 className="text-4xl font-semibold">{title}</h1>
                     <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{category_name}</span>
                     <div className="flex items-center justify-between">
@@ -33,20 +34,24 @@ const Blogdetails = () => {
                                     <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                                 </div>
                             </div>
-                            <p>{author_name}</p>
+                            <p className="text-sm font-medium text-slate-800">{author_name}</p>
                         </div>
-                        <p>Published Date: {publish_date}</p>
+                        <p className="text-sm font-medium text-slate-800">Published Date: {publish_date}</p>
                     </div>
-                    <p className="text-justify">{description}</p>
+                    <p className="text-justify text-base font-normal">{description}</p>
                 </div>
                 <div className="mt-10">
-                    <h2 className="text-4xl font-semibold mb-5">Related Blogs</h2>
+                    <div className="flex flex-col items-center justify-center gap-3 mb-10">
+                        <h2 className="text-4xl font-medium">Related Blogs</h2>
+                        <div className="w-[50px] h-[4px] rounded-full bg-red-500">
+                        </div>
+                    </div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                         {
                             relatedBlogs.map(blog => (
-                                <div key={blog.id} className="card bg-slate-50 shadow-sm rounded-md p-2 w-full">
-                                    <img src={blog.image} alt={blog.title} className="w-full h-40 object-cover mb-4" />
-                                    <div className="card-body space-y-4">
+                                <div key={blog.id} className="card bg-slate-50 shadow-sm rounded-md w-full p-5">
+                                    <div className="flex flex-col gap-3">
+                                        <img src={blog.image} className="rounded-md" />
                                         <h3 className="text-2xl line-clamp-2 font-medium">{blog.title}</h3>
                                         <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
                                         <p className="text-base font-normal line-clamp-3">{blog.description}</p>
