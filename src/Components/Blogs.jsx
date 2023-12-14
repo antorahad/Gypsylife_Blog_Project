@@ -32,7 +32,7 @@ const Blogs = () => {
                     {
                         categoryButtons.map(categoryButton => (
                             <button
-                                className={`btn ${activeCategory === categoryButton.id ? 'bg-red-500 hover:bg-red-500 focus:bg-red-500 py-3 px-5 border-none outline-none text-white ' : 'bg-slate-100 hover:bg-slate-100 focus:bg-slate-100 text-slate-950 py-3 px-5 border-none outline-none'}`}
+                                className={activeCategory === categoryButton.id ? 'btn bg-red-500 hover:bg-red-500 focus:bg-red-500 py-3 px-5 border-none outline-none text-white' : 'btn bg-slate-100 hover:bg-slate-100 focus:bg-slate-100 text-slate-950 py-3 px-5 border-none outline-none'}
                                 onClick={() => handleCategoryClick(categoryButton.id)}
                                 key={categoryButton.id}
                             >
