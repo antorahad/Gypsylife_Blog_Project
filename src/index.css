@@ -14,3 +14,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.banner2-bg {
+    background-color: black;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
