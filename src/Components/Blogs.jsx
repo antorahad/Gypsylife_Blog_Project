@@ -61,13 +61,12 @@ const Blogs = () => {
                 <div className="flex flex-col gap-3">
                   <img src={blog.image} className="rounded-md" />
                   <h4 className="text-2xl line-clamp-2 font-medium">{blog.title}</h4>
-                  <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
+                  <span className="badge badge-neutral rounded-md p-3 flex items-center justify-center">{blog.category_name}</span>
                   <p className="text-base font-normal line-clamp-3">{blog.description}</p>
                   <Link to={`/blog/${blog.id}`}>
                     <p className="text-red-500">Read More</p>
                   </Link>
                 </div>
-                {/* Render other blog details */}
               </div>
             ))
           ) : (
