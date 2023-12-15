@@ -32,7 +32,7 @@ const Blogdetails = () => {
             <div className="container mx-auto px-5 py-20">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-5">
                     <div className="w-full lg:w-1/2 relative">
-                        <img src={image} className="w-full" />
+                        <img src={image} className="w-full h-[400px] object-cover" />
                         <div className="bg-slate-900 bg-opacity-50 w-full h-16 absolute bottom-0 flex items-center justify-between px-5">
                             <div className="flex items-center gap-3">
                                 <div className="avatar-group -space-x-3 rtl:space-x-reverse">
@@ -59,7 +59,7 @@ const Blogdetails = () => {
                                 </div>
                                 <p className="text-white text-xs font-medium">120+ Views</p>
                             </div>
-                            <div className="flex items-center">
+                            <div>
                                 <button className="btn bg-transparent hover:bg-transparent focus:bg-transparent text-white border-none outline-none">Read Later <FaBookmark></FaBookmark></button>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ const Blogdetails = () => {
                             relatedBlogs.map(blog => (
                                 <div key={blog.id} className="card bg-slate-50 shadow-sm rounded-md w-full p-5">
                                     <div className="flex flex-col gap-3">
-                                        <img src={blog.image} className="rounded-md" />
+                                        <img src={blog.image} className="w-full h-[200px] object-cover rounded-md" />
                                         <h3 className="text-2xl line-clamp-2 font-medium">{blog.title}</h3>
                                         <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
                                         <p className="text-base font-normal line-clamp-3">{blog.description}</p>
