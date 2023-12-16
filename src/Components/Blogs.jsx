@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import error404 from '../assets/404-removebg-preview.png'
+import missingData from '../assets/No-data.jpg'
 const Blogs = () => {
   const [categories, setCategories] = useState([]);
   const [blogData, setBlogData] = useState([]);
@@ -77,11 +77,11 @@ const Blogs = () => {
           ))}
         </div>
         {displayData.length === 0 && (
-          <div className="flex items-center justify-center min-h-screen mt-5">
+          <div className="flex items-center justify-center min-h-screen">
             <img
-              src={error404}
+              src={missingData}
               alt="No data available"
-              className="w-[400px] h-[400px] object-cover rounded-md"
+              className="w-[500px] h-[500px] mx-auto object-cover rounded-md"
             />
           </div>
         )}
