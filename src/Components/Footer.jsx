@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaRedditAlien } from "react-icons/f
 import { Link } from "react-router-dom";
 const Footer = () => {
     return (
-        <div className="bg-black">
+        <div className="bg-gradient-to-r from-slate-900 to-slate-800">
             <footer className="container mx-auto p-5 flex flex-col lg:flex-row items-center justify-between gap-5">
                 <div className="flex flex-col items-center justify-center gap-2">
                     <h1 className="text-2xl font-bold text-white">

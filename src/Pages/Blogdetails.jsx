@@ -21,7 +21,7 @@ const Blogdetails = () => {
             <Helmet>
                 <title>GypsyLife | Blog Details Page</title>
             </Helmet>
-            <div className="banner2-bg flex flex-col gap-5 items-center justify-center">
+            <div className="bg-gradient-to-r from-slate-900 to-slate-800 w-full min-h-[50vh] flex flex-col gap-5 items-center justify-center">
                 <h1 className="text-white text-4xl font-bold">
                     Blog Details
                 </h1>
@@ -90,7 +90,7 @@ const Blogdetails = () => {
                         <div className="w-[50px] h-[4px] rounded-full bg-red-500">
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {
                             relatedBlogs.map(blog => (
                                 <div key={blog.id} className="card bg-slate-50 shadow-sm rounded-md w-full p-5">
