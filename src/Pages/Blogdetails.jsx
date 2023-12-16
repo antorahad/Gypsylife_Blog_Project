@@ -1,16 +1,13 @@
 import { useLoaderData, useParams, Link } from "react-router-dom";
 import { BsCalendar2Date } from "react-icons/bs";
 import { FaBookmark } from "react-icons/fa";
-
+import { Helmet } from 'react-helmet-async'
 const Blogdetails = () => {
     const details = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
     const detail = details.find(singleDetails => singleDetails.id === idInt);
 
-    if (!detail) {
-        return <div>Loading...</div>; // Handle case when detail is not found
-    }
 
     const { image, title, category_id, category_name, author_name, publish_date, description } = detail;
 
@@ -21,6 +18,9 @@ const Blogdetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>GypsyLife | Blog Details Page</title>
+            </Helmet>
             <div className="banner2-bg flex flex-col gap-5 items-center justify-center">
                 <h1 className="text-white text-4xl font-bold">
                     Blog Details
@@ -97,7 +97,7 @@ const Blogdetails = () => {
                                     <div className="flex flex-col gap-3">
                                         <img src={blog.image} className="w-full h-[200px] object-cover rounded-md" />
                                         <h3 className="text-2xl line-clamp-2 font-medium">{blog.title}</h3>
-                                        <span className="badge badge-neutral rounded-md p-2 flex items-center justify-center">{blog.category_name}</span>
+                                        <span className="badge badge-neutral rounded-md p-3 flex items-center justify-center text-xs">{blog.category_name}</span>
                                         <p className="text-base font-normal line-clamp-3">{blog.description}</p>
                                         <Link to={`/blog/${blog.id}`}>
                                             <p className="text-red-500">Read More</p>

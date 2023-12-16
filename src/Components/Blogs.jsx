@@ -5,34 +5,50 @@ const Blogs = () => {
   const [categories, setCategories] = useState([]);
   const [blogData, setBlogData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [showAll, setShowAll] = useState(false);
+  const initialDisplayCount = 6;
+  const [displayCount, setDisplayCount] = useState(initialDisplayCount);
 
   useEffect(() => {
-    // Fetch the JSON data
-    fetch('/blogdata.json') // Replace with your JSON URL
+    fetch('/blogdata.json')
       .then(response => response.json())
       .then(data => {
-        // Extract unique category names
         const uniqueCategories = [...new Set(data.map(item => item.category_name))];
         setCategories(uniqueCategories);
-        setBlogData(data); // Set all blog data initially
+        setBlogData(data);
       })
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => {
+        console.error('Error fetching blog data:', error);
+      });
   }, []);
 
   const handleCategoryClick = category => {
     setSelectedCategory(category);
+    setDisplayCount(initialDisplayCount);
+    setShowAll(false);
   };
 
   const setButtonStyle = category => {
     if (selectedCategory === category) {
-      return "btn bg-red-500 hover:bg-red-500 focus:bg-red-500 text-white border-none outline-none rounded-md"; // Apply this class for the active button
+      return "btn bg-red-500 hover:bg-red-500 focus:bg-red-500 text-white border-none outline-none rounded-md";
     }
-    return "btn bg-slate-100 hover:bg-slate-100 focus:bg-slate-100 text-slate-950 border-none outline-none rounded-md"; // Apply this class for inactive buttons
+    return "btn bg-slate-100 hover:bg-slate-100 focus:bg-slate-100 text-slate-950 border-none outline-none rounded-md";
   };
 
-  const displayData = selectedCategory
+  const handleLoadMoreClick = () => {
+    setShowAll(true);
+  };
+
+  const handleShowLessClick = () => {
+    setShowAll(false);
+    setDisplayCount(initialDisplayCount);
+  };
+
+  let displayData = selectedCategory
     ? blogData.filter(item => item.category_name === selectedCategory)
     : blogData;
+
+  displayData = showAll ? displayData : displayData.slice(0, displayCount);
 
   return (
     <div className="py-20 px-5">
@@ -59,9 +75,9 @@ const Blogs = () => {
             displayData.map(blog => (
               <div key={blog.id} className="card bg-slate-50 shadow-sm rounded-md w-full p-5">
                 <div className="flex flex-col gap-3">
-                  <img src={blog.image} className="w-full h-[200px] object-cover rounded-md" />
+                  <img src={blog.image} alt={blog.title} className="w-full h-[200px] object-cover rounded-md" />
                   <h4 className="text-2xl line-clamp-2 font-medium">{blog.title}</h4>
-                  <span className="badge badge-neutral rounded-md p-3 flex items-center justify-center">{blog.category_name}</span>
+                  <span className="badge badge-neutral rounded-md p-3 flex items-center justify-center text-xs">{blog.category_name}</span>
                   <p className="text-base font-normal line-clamp-3">{blog.description}</p>
                   <Link to={`/blog/${blog.id}`}>
                     <p className="text-red-500">Read More</p>
@@ -73,6 +89,25 @@ const Blogs = () => {
             <p>No data available</p>
           )}
         </div>
+        {selectedCategory === '' && displayData.length > 0 && (
+          <div className="flex justify-center mt-7">
+            {showAll ? (
+              <button
+                className="btn bg-red-500 hover:bg-red-500 focus:bg-red-500 text-white border-none outline-none rounded-md"
+                onClick={handleShowLessClick}
+              >
+                Show Less
+              </button>
+            ) : (
+              <button
+                className="btn bg-red-500 hover:bg-red-500 focus:bg-red-500 text-white border-none outline-none rounded-md"
+                onClick={handleLoadMoreClick}
+              >
+                Load More
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

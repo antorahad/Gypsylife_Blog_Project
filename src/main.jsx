@@ -9,20 +9,20 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home'
 import Blogdetails from './Pages/Blogdetails'
-
+import {  HelmetProvider } from 'react-helmet-async'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
-    errorElement: <Error/>,
+    element: <Layout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "/blog/:id",
-        element: <Blogdetails/>,
+        element: <Blogdetails />,
         loader: () => fetch('/blogdata.json')
       }
     ]
@@ -30,7 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <HelmetProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </HelmetProvider>
 )
