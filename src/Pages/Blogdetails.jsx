@@ -22,7 +22,7 @@ const Blogdetails = () => {
                 <title>GypsyLife | Blog Details Page</title>
             </Helmet>
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 w-full min-h-[50vh] flex flex-col gap-5 items-center justify-center">
-                <h1 className="text-white text-4xl font-bold">
+                <h1 className="text-white text-4xl font-bold pt-10">
                     Blog Details
                 </h1>
                 <Link to={'/'}>
